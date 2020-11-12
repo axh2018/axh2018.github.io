@@ -419,10 +419,19 @@
                 </a>
                 
                 
+                <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="博客" style="background-color: #F8F9F9;">博客
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/oss/" title="oss: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="oss" style="background-color: #F8F9F9;">oss
+                            data-tagname="oss" style="background-color: #82E0AA;">oss
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -431,7 +440,7 @@
                 <a href="/tags/%E8%BD%AF%E4%BB%B6/" title="软件: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="软件" style="background-color: #82E0AA;">软件
+                            data-tagname="软件" style="background-color: #D7BDE2;">软件
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -440,16 +449,7 @@
                 <a href="/tags/%E6%A0%A1%E5%9B%AD%E7%BD%91/" title="校园网: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="校园网" style="background-color: #D7BDE2;">校园网
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="博客" style="background-color: #A3E4D7;">博客
+                            data-tagname="校园网" style="background-color: #A3E4D7;">校园网
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -654,37 +654,15 @@ $(function () {
     
 
     
-        <script src="//code.tidio.co/lmdipz9ccu4h5rvnor8q5vgk23s1reif.js"></script>
-        <script>
-            $(document).ready(function () {
-                setInterval(change_Tidio, 50);
-                function change_Tidio() {
-                    var tidio=$("#tidio-chat iframe");
-                    if(tidio.css("display")=="block"&& $(window).width()>977 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" &&$(window).width()>977)>0? "-40px" : ($("div.toc-title").length&&$(window).width()>977)>0?"85px":"20px";
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
-                        document.getElementById("tidio-chat-iframe").style.height=parseInt(tidio.css("height"))>=520?"520px":tidio.css("height");
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()>601 &&$(window).width()<992 ){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && 601< $(window).width()<992)>0? "-40px":"20px" ;
-                        document.getElementById("tidio-chat-iframe").style.right="-15px";
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    else if(tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))<230){
-                        document.getElementById("tidio-chat-iframe").style.bottom= ($("div#backTop.top-scroll").css("display")=="none" && $(window).width()<601)>0? "-10px":"45px" ;
-                        document.getElementById("tidio-chat-iframe").style.zIndex="997";
-                    }
-                    if( tidio.css("display")=="block"&&$(window).width()<601 && parseInt(tidio.css("height"))>=230){
-                        document.getElementById("tidio-chat-iframe").style.zIndex="998";
-                    }
-                }
-            });
-        </script>
-    
 
     
 
+    <!--腾讯-->
+    
+        <div style="position:fixed;bottom:125px;right:9px;cursor: pointer;">
+            <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/292541"><img src="/medias/contacts.png"></a>
+        </div>
+    
     
 
     
