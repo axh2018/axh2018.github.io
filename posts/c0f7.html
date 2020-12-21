@@ -555,7 +555,7 @@ implementation 'com.squareup.okhttp3:okhttp:4.9.0'<span aria-hidden="true" class
 <p>updatedAt：数据更新时间</p>
 <p>ACL：数据控制访问权限</p>
 <p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/bmob/Snipaste2020-12-02-20-46-02.png"></p>
-<h3 id="增加"><a href="#增加" class="headerlink" title="增加"></a>增加</h3><p>在你的MainActivity中初始化Bmob，在onCreate()方法中加入这一句，表示初始化Bmob。</p>
+<h3 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h3><p>在你的MainActivity中初始化Bmob，在onCreate()方法中加入这一句，表示初始化Bmob。</p>
 <pre class="line-numbers language-java"><code class="language-java">Bmob<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> <span class="token string">"cf06227cd1dfc38af285002eacde6fb3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>接着就是定义实体类了。这个实体类必须继承BmobObject。我这里定义一个Person表。</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token keyword">package</span> cn<span class="token punctuation">.</span>com<span class="token punctuation">.</span>jaav<span class="token punctuation">.</span>bomb<span class="token punctuation">.</span>pojo<span class="token punctuation">;</span>
@@ -604,8 +604,7 @@ implementation 'com.squareup.okhttp3:okhttp:4.9.0'<span aria-hidden="true" class
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>Person表2个属性，见名知意。</p>
-<p>插入数据：</p>
-<pre class="line-numbers language-java"><code class="language-java">Person person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h3 id="插入数据："><a href="#插入数据：" class="headerlink" title="插入数据："></a>插入数据：</h3><pre class="line-numbers language-java"><code class="language-java">Person person <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 person<span class="token punctuation">.</span><span class="token function">setUsername</span><span class="token punctuation">(</span><span class="token string">"张三"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 person<span class="token punctuation">.</span><span class="token function">setPassword</span><span class="token punctuation">(</span><span class="token string">"666666"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 person<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">SaveListener</span><span class="token operator">&lt;</span>String<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -618,8 +617,7 @@ person<span class="token punctuation">.</span><span class="token function">save<
                     <span class="token punctuation">}</span>
                 <span class="token punctuation">}</span>
             <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>删除数据：</p>
-<pre class="line-numbers language-java"><code class="language-java">Person p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h3 id="删除数据："><a href="#删除数据：" class="headerlink" title="删除数据："></a>删除数据：</h3><pre class="line-numbers language-java"><code class="language-java">Person p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 p2<span class="token punctuation">.</span><span class="token function">setObjectId</span><span class="token punctuation">(</span><span class="token string">"6b6c11c537"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 p2<span class="token punctuation">.</span><span class="token function">delete</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">UpdateListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 
@@ -634,8 +632,7 @@ p2<span class="token punctuation">.</span><span class="token function">delete</s
     <span class="token punctuation">}</span>
 
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>修改数据：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//更新Person表里面id为6b6c11c537的数据，address内容更新为“北京朝阳”</span>
+<h3 id="修改数据："><a href="#修改数据：" class="headerlink" title="修改数据："></a>修改数据：</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//更新Person表里面id为6b6c11c537的数据，address内容更新为“北京朝阳”</span>
 Person p2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Person</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 p2<span class="token punctuation">.</span><span class="token function">setUsername</span><span class="token punctuation">(</span><span class="token string">"李四"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 p2<span class="token punctuation">.</span><span class="token function">update</span><span class="token punctuation">(</span><span class="token string">"6b6c11c537"</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">UpdateListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -650,8 +647,7 @@ p2<span class="token punctuation">.</span><span class="token function">update</s
     <span class="token punctuation">}</span>
 
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>查询数据：</p>
-<pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//查找Person表里面id为6b6c11c537的数据</span>
+<h3 id="查询数据："><a href="#查询数据：" class="headerlink" title="查询数据："></a>查询数据：</h3><pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//查找Person表里面id为6b6c11c537的数据</span>
 BmobQuery<span class="token operator">&lt;</span>Person<span class="token operator">></span> bmobQuery <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BmobQuery</span><span class="token operator">&lt;</span>Person<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 bmobQuery<span class="token punctuation">.</span><span class="token function">getObject</span><span class="token punctuation">(</span><span class="token string">"6b6c11c537"</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">QueryListener</span><span class="token operator">&lt;</span>Person<span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
@@ -663,7 +659,7 @@ bmobQuery<span class="token punctuation">.</span><span class="token function">ge
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>有没有发现除了插入之外，其他几个都比较操蛋？特别是这个查询，我需要知道这个person的objectId，我才能去查询他。官方文档也说明了，查询一条记录必须根据objectId来查。但是对我们来说，这是极其不方便的，例如模拟用户登录过程，你不可能知道他的objectId。我们可以把它当作多条数据查询。判断查询得到的list的长度为不为0，不为0即代表查询到了数据。</p>
+<p>有没有发现除了插入之外，其他几个都比较操蛋？特别是这个查询，我需要知道这个person的objectId，我才能去查询他。官方文档也说明了，查询一条记录必须根据objectId来查。但是对我们来说，这是极其不方便的，例如用户登录过程，你不可能知道他的objectId。我们可以把它当作多条数据查询。判断查询得到的list的长度为不为0，不为0即代表查询到了数据。</p>
 <pre class="line-numbers language-java"><code class="language-java"><span class="token comment" spellcheck="true">//查询</span>
         queryButton<span class="token punctuation">.</span><span class="token function">setOnClickListener</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">View<span class="token punctuation">.</span>OnClickListener</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
             <span class="token annotation punctuation">@Override</span>
@@ -1104,47 +1100,45 @@ bmobFile<span class="token punctuation">.</span><span class="token function">upl
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/c0f7.html">
+                <a href="/posts/e397.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/13.jpg" class="responsive-img" alt="bmob后端云">
+                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/13.jpg" class="responsive-img" alt="何时何地连接你的windows--frp">
                         
-                        <span class="card-title">bmob后端云</span>
+                        <span class="card-title">何时何地连接你的windows--frp</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            比目数据库在安卓上使用教程
+                            frp配置
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-02
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-21
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%AE%89%E5%8D%93/" class="post-category">
-                                    安卓
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6/" class="post-category">
+                                    软件
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">
-                        <span class="chip bg-color">数据库</span>
+                    <a href="/tags/frp/">
+                        <span class="chip bg-color">frp</span>
                     </a>
                     
                 </div>
@@ -1347,7 +1341,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">32.7k</span>&nbsp;字
+                class="white-color">33.8k</span>&nbsp;字
             
             
             
@@ -1461,10 +1455,10 @@ $(function () {
 
     
 
-    <!--腾讯-->
+    <!--腾讯兔小巢-->
     
-        <div style="position:fixed;bottom:125px;right:9px;cursor: pointer;">
-            <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/292541"><img src="/medias/contacts.png"></a>
+        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
+            <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/292541"><i class="fa fa-comments fa-3x"  aria-hidden="true"></i></a>
         </div>
     
     
