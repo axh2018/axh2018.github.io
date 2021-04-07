@@ -319,14 +319,21 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/css/barrager.css">
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.10.1/dist/av-min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/jquery.barrager.js"></script>
+
+<div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
     <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
         <div class="brand">
             <div class="title center-align">
                 
-                    subtitle
+                 
                 
             </div>
 
@@ -370,298 +377,117 @@
                 </div>
                 
             </div>
-        </div>
-        <div class="card">
-            
+            <div class="container">
+                <section id="custom" class="bb-section">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" >弹幕</label>
+                                    <div class="col-sm-6">
+                                        <label>
+                                            <input class="form-control" name="info" type="text" placeholder="hello, world"/>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" >链接</label>
+                                    <div class="col-sm-6">
+                                        <label>
+                                            <input class="form-control" name="href" type="text" placeholder="https://github.com/blinkfox/hexo-theme-matery"/>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-2 control-label" >速度</label>
+                                    <div class="col-sm-2">
+                                        <label>
+                                            <input  class="form-control"  name="speed" type="text" placeholder="6" value="16" />
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="form-group">
+                                <!-- ToDo 样式-->
+                                <label class="col-sm-2 control-label" ></label>
+                                <div class="col-sm-3">
+                                    <button  class="btn btn-primary   bb-light-blue"  onclick="run()">运行</button>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button  class="btn btn-warning"  onclick="clear_barrage()"> 清除</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
 
-            
+            <script type="text/javascript">
+                $(function() {
+                    do_barrager();
+                    async function do_barrager() {
+                        let lists = [];
+                        AV.init({
+                            appId: "zNeXiIujwazmyGjWLLrufvAh-MdYXbMMI",
+                            appKey: "9DSsEV1aakMsNzhMsEzL3l67"
+                        });
+                        //查询弹幕，此处为异步
+                        const query = new AV.Query('barrager');
+                        const barrager = await query.find().then((barrager) => {
+                            lists = barrager;
+                        })
+                        let length = lists.length;
+                        let index = 0;
+                        const timer = setInterval(() => {
+                            if (index === length) {
+                                clearInterval(timer);
+                                do_barrager()
+                            } else {
+                                let obj = lists[index]
+                                let jsonObject = eval('(' + JSON.stringify(obj) + ')');
+                                $('body').barrager({
+                                    'img': '/medias/barrager/' + Math.floor(Math.random() * 3) + ".png",
+                                    'href': jsonObject.href,
+                                    'info': jsonObject.info,
+                                    'speed': jsonObject.speed
+                                });
+                                index++;
+                            }
+                        }, 250)
+                    }
+                });
 
-            
+                //插入弹幕
+                function  run(){
+                    let info = $('input[name=info]').val();
+                    //判断info是否为空，为空则等于'请填写弹幕文字'
+                    (info === '' ) ?  info='请填写弹幕文字' : info=info;
+                    const href = $('input[name=href]').val();
+                    const speed = parseInt($('input[name=speed]').val());
+                    AV.init({
+                        appId: "zNeXiIujwazmyGjWLLrufvAh-MdYXbMMI",
+                        appKey: "9DSsEV1aakMsNzhMsEzL3l67"
+                    });
+                    const Barrager = AV.Object.extend('barrager');
+                    const barrager = new Barrager();
+                    barrager.set('href', href);
+                    barrager.set('info', info);
+                    barrager.set('speed', speed);
+                    // 将对象保存到云端
+                    barrager.save().then((todo) => {
+                        console.log(`保存成功objectId：${todo.id}`);
+                    });
+                }
 
-            
+                function  clear_barrage()
+                {
+                    $.fn.barrager.removeAll();
+                }
 
-            
-
-            
-            <style>
-    .valine-card {
-        margin: 1.5rem auto;
-    }
-
-    .valine-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-
-    #vcomments textarea {
-        box-sizing: border-box;
-        background: url("/medias/comment_bg.webp") 100% 100% no-repeat;
-    }
-
-    #vcomments p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-
-    #vcomments blockquote p {
-        text-indent: 0.2rem;
-    }
-
-    #vcomments a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-
-    #vcomments img {
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    #vcomments ol li {
-        list-style-type: decimal;
-    }
-
-    #vcomments ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-
-    #vcomments ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-
-    #vcomments ul li {
-        list-style-type: disc;
-    }
-
-    #vcomments ul ul li {
-        list-style-type: circle;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    #vcomments table, th, td {
-        border: 0;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-
-    #vcomments h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-
-    #vcomments h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-
-    #vcomments h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    #vcomments h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-
-    #vcomments h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-
-    #vcomments p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
-    #vcomments hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-
-    #vcomments blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-
-    #vcomments pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-
-    #vcomments code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-
-    #vcomments pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-
-    #vcomments pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-
-    #vcomments code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-    #vcomments b,
-    strong {
-        font-weight: bold;
-    }
-
-    #vcomments dfn {
-        font-style: italic;
-    }
-
-    #vcomments small {
-        font-size: 85%;
-    }
-
-    #vcomments cite {
-        font-style: normal;
-    }
-
-    #vcomments mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-</style>
-
-<div class="card valine-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="vcomments" class="card-content" style="display: grid">
-    </div>
-</div>
-
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
-<script>
-    let metaPlaceholder = {"nick":"昵称/QQ号(必填)","mail":"邮箱(必填)","link":"网址(https://)"};
-    //这里要换行
-    new Valine({
-        el: '#vcomments',
-        appId: 'jednIfOezaTYEzdCMCHUaToe-MdYXbMMI',
-        appKey: 's07Yisjp8amNBBQzRFSa6tIF',
-        notify: 'true' === 'true',
-        verify: 'true' === 'true',
-        visitor: 'true' === 'true',
-        avatar: 'monsterid',
-        pageSize: '10',
-        lang: 'zh-CN',
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
-        meta: ["nick", "mail", "link"],
-        recordIP: 'true' === 'true',
-        enableQQ: 'monsterid',
-        requiredFields: ["884dfd2bde4d1a57adc962d0d3e6b2a5"],
-        master: ["884dfd2bde4d1a57adc962d0d3e6b2a5"],
-        friends: ["884dfd2bde4d1a57adc962d0d3e6b2a5", "901345d4c91ddfd8db0f175bbcfff0c8", "1512958e18378c98b498d5effe3e76ff"],
-        tagMeta: ["博主", "小伙伴", "访客"],
-        metaPlaceholder: metaPlaceholder,
-    });
-</script>
-
-            
-			
-			
+            </script>
         </div>
     </div>
 </main>
-
 
     <footer class="page-footer bg-color">
     
@@ -669,7 +495,7 @@
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2020</span>
+                <span id="year">2019-2021</span>
             
             <a href="/about" target="_blank">布莱恩特科比酱</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
@@ -792,10 +618,6 @@ $(function () {
     
 
     <!--腾讯兔小巢-->
-    
-        <div style="position:fixed;bottom:125px;right:16px;cursor: pointer;">
-            <a title="兔小巢" target="_blank" rel="noopener" href="https://support.qq.com/products/292541"><i class="fa fa-comments fa-3x"  aria-hidden="true"></i></a>
-        </div>
     
     
 
