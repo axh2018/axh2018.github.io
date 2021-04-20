@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="用ipv6攻破校园网, cherry">
+    <meta name="keywords" content="ipv6白嫖校园网, cherry">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>用ipv6攻破校园网 | cherry</title>
+    <title>ipv6白嫖校园网 | cherry</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -328,7 +328,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">用ipv6攻破校园网</h1>
+                    <h1 class="description center-align post-title">ipv6白嫖校园网</h1>
                 </div>
             </div>
         </div>
@@ -479,7 +479,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    983
+                    979
                 </div>
                 
 
@@ -491,10 +491,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h2><p>学校校园网价格越来越贵，由此不得不萌生一些邪恶的想法，（最初这个想法是我同学告诉我的，居然真实可行！）学校校园网通过浏览器web验证，输入学号，密码即可上网。但是，意外的发现，连上校园网后，他自动会弹出浏览器，让我登录，我不登录，居然可以进入<code>ipv6</code>网站，例如：<a target="_blank" rel="noopener" href="https://bt.byr.cn/index.php">https://bt.byr.cn/index.php</a> 北京邮电大学的<code>pt</code>站点，说明校园网在<code>ipv6</code>上并没有设置验证，连上了校园网不登录即可上<code>ipv6</code>网站！</p>
+                <h2 id="由来"><a href="#由来" class="headerlink" title="由来"></a>由来</h2><p>学校校园网价格越来越贵，由此不得不萌生一些邪恶的想法，（最初这个想法是同学告诉我的，居然真实可行！）学校校园网通过浏览器web验证，输入学号，密码即可上网。但是，意外的发现，连上校园网后，他自动会弹出浏览器，让我登录，我不登录，居然可以进入<code>ipv6</code>网站，例如：<a target="_blank" rel="noopener" href="https://bt.byr.cn/index.php">https://bt.byr.cn/index.php</a> 北京邮电大学的<code>pt</code>站点，说明校园网在<code>ipv6</code>上并没有设置验证，连上了校园网不登录即可上<code>ipv6</code>网站！</p>
 <p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/schoolnet/Snipaste2020-09-21-22-09-20.png"></p>
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>首先：校园网必须是通过浏览器web验证 + 并且没验证能上ipv6网站（例如前面提到的北邮pt站点）+ 一台有<code>ipv6</code>地址的服务器，没有这些条件请绕道。</p>
-<p>温馨提示：最好选购一台海外的服务器，例如virmach或者hostmen. . . ，海外服务器基本上都会有一个ipv6地址，而且不另外收费，在国内的话，ipv6地址很难搞到，并且国内服务器带宽很低。</p>
+<p>提示：最好有一台海外的服务器，例如virmach或者hostmem. . . ，海外服务器基本上都会有一个ipv6地址，而且不另外收费，在国内的话，ipv6地址很难搞到，并且国内服务器带宽很低。</p>
 <p>例如我这台华为云的服务器：</p>
 <p>最低配置： 一核一g1M，公网ipv6地址需要自己申请，推荐海外服务器。</p>
 <p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/schoolnet/Snipaste2020-09-21-22-23-27.png"></p>
@@ -503,18 +503,18 @@
 <p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/schoolnet/Snipaste2020-09-21-22-29-42.png"></p>
 <p>接下来就是安装<code>shadownsocksR</code>这个脚本了，其实就是用你的服务器做了个代理，转发<code>ipv6</code>流量，其他的没什么。</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">wget</span> -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/ssr.sh <span class="token operator">&amp;&amp;</span> <span class="token function">chmod</span> +x ssr.sh <span class="token operator">&amp;&amp;</span> <span class="token function">bash</span> ssr.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这个脚本我开始死活装不上，因为其中的一个1.8M依赖包一直下不下来，最后自己手动在我的电脑上下下来，再传到服务器里，手动编译安装，然后修改了下上面的脚本，才成功。海外的服务器下载应该蛮快的。</p>
+<p>这个脚本我因为网络原因装不上，因为其中的一个1.8M依赖包一直下不下来，最后自己手动在我的电脑上下下来，再传到服务器里，手动编译安装，然后修改了下上面的脚本，才成功。海外的服务器下载应该蛮快的。</p>
 <p>脚本下载完成后，会在你服务器安装<code>shadowsocksR</code>服务，你一直跟着他的提示来就好。</p>
 <p>下面几张截图演示一下安装<code>shadowsocksR</code>服务（另一台服务器：</p>
 <p>①安装<code>shadowsocksR</code></p>
 <p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/schoolnet/Snipaste2020-11-02-19-25-34.png"></p>
 <p>②设置端口和密码</p>
 <p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/schoolnet/Snipaste2020-11-02-19-27-34.png"></p>
-<p>③加密方式和 <code>auth_chain_a</code> 协议</p>
+<p>③加密方式和 <code>auth_sha1_v4</code> 协议</p>
 <p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/schoolnet/Snipaste2020-11-02-19-29-54.png"></p>
 <p>④混淆插件和限速设置</p>
 <p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/schoolnet/Snipaste2020-11-02-19-31-02.png"></p>
-<p>⑤大功告成</p>
+<p>⑤完成</p>
 <p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/schoolnet/Snipaste2020-11-02-19-32-03.png"></p>
 <p>关键一点：在服务器后台管理界面开放你自己设置的端口，我这里选择了10086端口。</p>
 <p>安装完成后，会显示shadowsocksR服务端的具体信息：</p>
@@ -529,7 +529,8 @@
 <p>填完信息后，右键小飞机，系统代理模式和代理规则全部选择全局，）PAC就不用管了</p>
 <p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/schoolnet/Snipaste2020-09-21-22-57-48.png"></p>
 <p>到此就结束了，如果没登陆校园网能上前面提到的北邮pt站点即代表成功了！</p>
-<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>重要的事情说三遍：本文仅供学习参考！！！本文仅供学习参考！！！本文仅供学习参考！！！</p>
+<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>重要的事情说三遍：</p>
+<p><strong>本文仅供学习参考！！！本文仅供学习参考！！！本文仅供学习参考！！！</strong></p>
 
             </div>
             <hr/>
@@ -1153,7 +1154,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.8k</span>&nbsp;字
+                class="white-color">34.2k</span>&nbsp;字
             
             
             

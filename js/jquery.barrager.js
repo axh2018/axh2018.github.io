@@ -17,11 +17,17 @@
 		const barrager_id = 'barrage_' + time;
 		const id = '#' + barrager_id;
 		const div_barrager = $("<div class='barrage' id='" + barrager_id + "'></div>").appendTo($(this));
-		const window_height = $(window).height() - 100;
-		const this_height = (window_height > this.height()) ? this.height() : window_height;
-		const window_width = $(window).width() + 500;
-		const this_width = (window_width > this.width()) ? this.width() : window_width;
-		const bottom = Math.floor(Math.random() * this_height + 40);
+		const this_height = $(window).height() * 0.35;
+		const this_width = $(window).width() + 100;
+		const array = [
+			1*(this_height/5) + $(window).height() * 0.5,
+			2*(this_height/5) + $(window).height() * 0.5,
+			3*(this_height/5) + $(window).height() * 0.5,
+			4*(this_height/5) + $(window).height() * 0.5,
+			5*(this_height/5)   + $(window).height() * 0.5
+		]
+		const bottom =array[Math.floor(Math.random()*5)];
+
 		div_barrager.css("bottom", bottom + "px");
 		div_barrager_box = $("<div class='barrage_box cl'></div>").appendTo(div_barrager);
 		if(barrage.img){

@@ -1215,6 +1215,8 @@ article .article-tags .chip {
 }
 
 #articleContent img {
+   /*此处为文章中的图片添加一个小的圆角*/
+    border-radius: 8px;;
     max-width: 100%;
     height: auto;
     cursor: pointer;

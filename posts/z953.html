@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Docker运行酷Q, cherry">
+    <meta name="keywords" content="不到100块的智能门, cherry">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Docker运行酷Q | cherry</title>
+    <title>不到100块的智能门 | cherry</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -323,12 +323,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Docker运行酷Q</h1>
+                    <h1 class="description center-align post-title">不到100块的智能门</h1>
                 </div>
             </div>
         </div>
@@ -338,10 +338,105 @@
 
 
 
-<main class="container content">
+<main class="post-container content">
 
     
-    <!-- 文章内容详情 -->
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
 <div id="artDetail">
     <div class="card">
         <div class="card-content article-info">
@@ -350,8 +445,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Docker/">
-                                <span class="chip bg-color">Docker</span>
+                            <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">
+                                <span class="chip bg-color">单片机</span>
                             </a>
                         
                     </div>
@@ -362,8 +457,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Docker/" class="post-category">
-                                Docker
+                            <a href="/categories/esp32-cam/" class="post-category">
+                                esp32-cam
                             </a>
                         
                     </div>
@@ -375,7 +470,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-01-29
+                    2021-04-20
                 </div>
                 
 
@@ -384,7 +479,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    431
+                    397
                 </div>
                 
 
@@ -396,62 +491,47 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>CentOS运行酷Q需要<a href=" https://www.docker.com/ ">docker</a>的加持，什么是docker?</p>
-<p> Docker 是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的镜像中，然后发布到任何流行的 Linux或Windows 机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。 </p>
-<ol>
-<li>卸载Docker旧版本(如果存在的情况下)</li>
-</ol>
-<pre class="line-numbers language-bash"><code class="language-bash">yum -y remove docker docker-engine docker-common docker-selinux<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="2">
-<li>安装依赖软件包</li>
-</ol>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> yum <span class="token function">install</span> -y yum-utils device-mapper-persistent-data  lvm2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="3">
-<li>安装Docker</li>
-</ol>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> yum update
-<span class="token function">sudo</span> yum <span class="token function">install</span> docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<ol start="4">
-<li>启动Docker</li>
-</ol>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> systemctl start docker
-<span class="token function">sudo</span> <span class="token function">enable</span> docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<ol start="5">
-<li>验证是否安装成功</li>
-</ol>
-<pre class="line-numbers language-bash"><code class="language-bash">docker --version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ol start="6">
-<li>阿里云镜像加速&lt;**注意,这点非常重要,不用加速,你可能pull一个coolq的镜像需要几个小时**&gt;</li>
-</ol>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">mkdir</span> -p /etc/docker
-vim /etc/docker/daemon.json
-<span class="token function">sudo</span> <span class="token function">tee</span> /etc/docker/daemon.json <span class="token operator">&lt;&lt;</span>-<span class="token string">'EOF'</span>
-<span class="token punctuation">{</span>
-  <span class="token string">"registry-mirrors"</span><span class="token keyword">:</span> <span class="token punctuation">[</span><span class="token string">"https://dttr1kms.mirror.aliyuncs.com"</span><span class="token punctuation">]</span>
-<span class="token punctuation">}</span>
-EOF
-<span class="token function">sudo</span> systemctl daemon-reload
-<span class="token function">sudo</span> systemctl restart docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>卸载docker</p>
-<pre class="line-numbers language-bash"><code class="language-bash">systemctl stop docker
-yum -y remove docker-ce
-<span class="token function">rm</span> -rf /var/lib/docker<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>那么接下来我们就来在CentOS的服务器上运行酷Q</p>
-<ul>
-<li>开启Docker<pre class="line-numbers language-bash"><code class="language-bash">systemctl start docker <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-</ul>
-<ol>
-<li>拉取coolq镜像<pre class="line-numbers language-bash"><code class="language-bash">docker pull coolq/wine-coolq<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>然后创建一个存放数据的文件夹<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">mkdir</span> /root/coolq-data<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-</li>
-<li>运行酷Q<pre class="line-numbers language-bash"><code class="language-bash">docker run --name<span class="token operator">=</span>coolq -d -p 8080:9000 -v /root/coolq-data:/home/user/coolq -e VNC_PASSWD<span class="token operator">=</span>123456 -e COOLQ_ACCOUNT<span class="token operator">=</span>123456 coolq/wine-coolq<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-然后打开浏览器输入你的  IP:8080   就可以访问VNC了，密码是上面设置的123456</li>
-</ol>
-<p><strong>注意，此时你可能通过浏览器输入你的IP加端口不能访问到VNC界面，因为还没开放相应端口，去服务器后台安全组开放端口</strong></p>
-<p>更多有趣的酷Q插件，请访问<a target="_blank" rel="noopener" href="https://cqp.cc/b/app">cpp.cc/b/cpp</a></p>
+                <p>先来个实际效果展示：</p>
+<iframe src="//player.bilibili.com/player.html?aid=587466973&amp;bvid=BV1tB4y1w7tb&amp;cid=318093608&amp;page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
 
+<h2 id="材料篇"><a href="#材料篇" class="headerlink" title="材料篇"></a>材料篇</h2><ol>
+<li><code>esp32-cam</code>开发板一块</li>
+<li><code>cp2102 usb to ttl</code>烧录器一个</li>
+<li>模拟<code>mg90s</code>舵机一枚</li>
+<li>透明胶布一卷</li>
+<li>鱼线一卷</li>
+<li>杜邦线公对母，母对母若干</li>
+<li>3.7V <code>18650</code>电池一节</li>
+<li><code>18650</code>电池充电器一枚</li>
+</ol>
+<p>开发板￥28 + 烧录器￥8 + 舵机￥20 + 胶布￥5 + 鱼线￥2 + 杜邦线￥4 + 电池￥5 + 充电器￥10</p>
+<h2 id="环境篇"><a href="#环境篇" class="headerlink" title="环境篇"></a>环境篇</h2><h3 id="安装arduino"><a href="#安装arduino" class="headerlink" title="安装arduino"></a>安装<code>arduino</code></h3><p><a target="_blank" rel="noopener" href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
+<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-05-45.png"></p>
+<h3 id="配置esp库"><a href="#配置esp库" class="headerlink" title="配置esp库"></a>配置<code>esp</code>库</h3><p>安装<code>arduino</code>后，打开首选项，填入下面的<code>url</code>，选择ok即可</p>
+<p><strong>因为网络原因，下载可能较慢，需要魔法</strong></p>
+<p><a target="_blank" rel="noopener" href="https://dl.espressif.com/dl/package_esp32_index.json">https://dl.espressif.com/dl/package_esp32_index.json</a></p>
+<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-13-34.png"></p>
+<h3 id="安装esp32库"><a href="#安装esp32库" class="headerlink" title="安装esp32库"></a>安装esp32库</h3><p>打开工具-&gt;开发板-&gt;开发板管理器，搜索esp32，安装即可</p>
+<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-23-04.png"></p>
+<p><strong>因为网络原因，下载可能较慢，需要魔法</strong></p>
+<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-25-09.png"></p>
+<h3 id="选择开发板"><a href="#选择开发板" class="headerlink" title="选择开发板"></a>选择开发板</h3><p>上面步骤完成后，选择<code>AI-Thinker ESP32-CAM</code>这块开发板</p>
+<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-33-08.png"></p>
+<h3 id="配置编译tools"><a href="#配置编译tools" class="headerlink" title="配置编译tools"></a>配置编译<code>tools</code></h3><p>在你的<code>arduino</code>安装目录下，找到<code>hardware</code>这个目录，例如我的是：<code>D:\arduino\hardware</code><br>建立目录<code>espressif</code>，再在<code>espressif</code>里面建立<code>esp32</code>目录。</p>
+<p>在<code>esp32</code>这个目录下执行</p>
+<p><code>git clone https://github.com/espressif/arduino-esp32.git</code></p>
+<p>提示：这个仓库比较大，下载较慢</p>
+<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-45-28.png"></p>
+<p>克隆完成后，进入到<code>esp/tools</code>这个目录，双击<code>get.exe</code></p>
+<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-09-45.png"></p>
+<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-12-03.png"></p>
+<h3 id="注册巴法云"><a href="#注册巴法云" class="headerlink" title="注册巴法云"></a>注册巴法云</h3><p>我们用到的平台为巴法云，免费使用，且不用实名认证群里的开发者都特别热心，安利一波。</p>
+<p>巴法云官网：<a target="_blank" rel="noopener" href="https://bemfa.com/%E6%B3%A8%E5%86%8C%E5%8F%AA%E9%9C%80%E8%A6%81%E9%82%AE%E7%AE%B1%E5%8D%B3%E5%8F%AF">https://bemfa.com/注册只需要邮箱即可</a></p>
+<p>选择创建一个<code>tcp</code>创客云</p>
+<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-50-02.png"></p>
+<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-50-17.png"></p>
+<p>至此，环境搭建完成~</p>
+<h2 id="代码篇"><a href="#代码篇" class="headerlink" title="代码篇"></a>代码篇</h2><h2 id="拆门篇"><a href="#拆门篇" class="headerlink" title="拆门篇"></a>拆门篇</h2><h2 id="结束篇"><a href="#结束篇" class="headerlink" title="结束篇"></a>结束篇</h2>
             </div>
             <hr/>
 
@@ -476,7 +556,7 @@ yum -y remove docker-ce
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://jaav.com.cn/posts/a01a.html">https://jaav.com.cn/posts/a01a.html</a>
+                    <a href="https://jaav.com.cn/posts/z953.html">https://jaav.com.cn/posts/z953.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -514,8 +594,8 @@ yum -y remove docker-ce
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Docker/">
-                                    <span class="chip bg-color">Docker</span>
+                                <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">
+                                    <span class="chip bg-color">单片机</span>
                                 </a>
                             
                         </div>
@@ -833,45 +913,47 @@ yum -y remove docker-ce
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/a654.html">
+                <a href="/posts/z953.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/4.jpg" class="responsive-img" alt="Hexo+Github部署博客">
+                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/15.jpg" class="responsive-img" alt="不到100块的智能门">
                         
-                        <span class="card-title">Hexo+Github部署博客</span>
+                        <span class="card-title">不到100块的智能门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo框架搭建博客
+                            108块带你打造一个智能们
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-20
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%8D%9A%E5%AE%A2/" class="post-category">
-                                    博客
+                            <a href="/categories/esp32-cam/" class="post-category">
+                                    esp32-cam
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
+                    <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">
+                        <span class="chip bg-color">单片机</span>
                     </a>
                     
                 </div>
@@ -885,30 +967,30 @@ yum -y remove docker-ce
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/d698.html">
+                <a href="/posts/e397.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/1.jpg" class="responsive-img" alt="安装ArchLinux">
+                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/14.jpg" class="responsive-img" alt="内网穿透--frp">
                         
-                        <span class="card-title">安装ArchLinux</span>
+                        <span class="card-title">内网穿透--frp</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Arch安装教程
+                            frp配置
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-01-08
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-21
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Arch/" class="post-category">
-                                    Arch
+                            <a href="/categories/%E8%BD%AF%E4%BB%B6/" class="post-category">
+                                    软件
                                 </a>
                             
                             
@@ -918,8 +1000,8 @@ yum -y remove docker-ce
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Arch/">
-                        <span class="chip bg-color">Arch</span>
+                    <a href="/tags/frp/">
+                        <span class="chip bg-color">frp</span>
                     </a>
                     
                 </div>
@@ -958,6 +1040,100 @@ yum -y remove docker-ce
 code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
 </style>
 
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
 
     
 

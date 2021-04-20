@@ -377,114 +377,120 @@
                 </div>
                 
             </div>
-            <div class="container">
-                <section id="custom" class="bb-section">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <form class="form-horizontal">
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" >弹幕</label>
-                                    <div class="col-sm-6">
-                                        <label>
-                                            <input class="form-control" name="info" type="text" placeholder="hello, world"/>
-                                        </label>
+            <!--valine评论弹幕-->
+            
+                <p align="center">
+                    <b>畅所欲言</b><br>
+                    <b>在这里可以留下你的足迹，欢迎在下方留言，欢迎交换友链，一起交流学习！</b><br>
+                    <b>友链信息</b><br>
+                    <b>博客名称: cherry</b><br>
+                    <b>博客网址: https://jaav.com.cn</b><br>
+                    <b>博客头像: https://jaav.com.cn/logo.png</b><br>
+                    <b>博客介绍: 犹豫就会败北</b><br>
+                </p>
+                <div class="container">
+                    <section id="custom" class="bb-section">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <form class="form-inline">
+                                    <div class="form-group">
+                                        文字：<input class="form-control" name="info" type="text" placeholder="hello, world"/>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" >链接</label>
-                                    <div class="col-sm-6">
-                                        <label>
-                                            <input class="form-control" name="href" type="text" placeholder="https://github.com/blinkfox/hexo-theme-matery"/>
-                                        </label>
+                                    <div class="form-group">
+                                        链接：<input class="form-control" name="href" type="text" placeholder="https://github.com/blinkfox/hexo-theme-matery"/>
                                     </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-2 control-label" >速度</label>
-                                    <div class="col-sm-2">
-                                        <label>
-                                            <input  class="form-control"  name="speed" type="text" placeholder="6" value="16" />
-                                        </label>
+                                    <div class="form-group">
+                                        速度：<input  class="form-control"  name="speed" type="text" placeholder="6" value="16" />
                                     </div>
-                                </div>
-                            </form>
-                            <div class="form-group">
-                                <!-- ToDo 样式-->
-                                <label class="col-sm-2 control-label" ></label>
-                                <div class="col-sm-3">
-                                    <button  class="btn btn-primary   bb-light-blue"  onclick="run()">运行</button>
-                                </div>
-                                <div class="col-sm-3">
-                                    <button  class="btn btn-warning"  onclick="clear_barrage()"> 清除</button>
+                                </form>
+                                <div class="form-group">
+                                    <button  style="margin-bottom: 10px;width: 49%" class="btn" onclick="run()">留言</button>
+                                    <button style="margin-bottom: 10px;width: 49%;background-color: #e7c65c" class="btn " onclick="clear_barrage()"> 清除</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-            </div>
+                    </section>
+                </div>
 
-            <script type="text/javascript">
-                $(function() {
-                    do_barrager();
-                    async function do_barrager() {
-                        let lists = [];
-                        AV.init({
-                            appId: "zNeXiIujwazmyGjWLLrufvAh-MdYXbMMI",
-                            appKey: "9DSsEV1aakMsNzhMsEzL3l67"
-                        });
-                        //查询弹幕，此处为异步
-                        const query = new AV.Query('barrager');
-                        const barrager = await query.find().then((barrager) => {
-                            lists = barrager;
-                        })
-                        let length = lists.length;
-                        let index = 0;
-                        const timer = setInterval(() => {
-                            if (index === length) {
-                                clearInterval(timer);
-                                do_barrager()
-                            } else {
-                                let obj = lists[index]
-                                let jsonObject = eval('(' + JSON.stringify(obj) + ')');
-                                $('body').barrager({
-                                    'img': '/medias/barrager/' + Math.floor(Math.random() * 3) + ".png",
-                                    'href': jsonObject.href,
-                                    'info': jsonObject.info,
-                                    'speed': jsonObject.speed
-                                });
-                                index++;
-                            }
-                        }, 250)
-                    }
-                });
-
-                //插入弹幕
-                function  run(){
-                    let info = $('input[name=info]').val();
-                    //判断info是否为空，为空则等于'请填写弹幕文字'
-                    (info === '' ) ?  info='请填写弹幕文字' : info=info;
-                    const href = $('input[name=href]').val();
-                    const speed = parseInt($('input[name=speed]').val());
+                <script type="text/javascript">
                     AV.init({
-                        appId: "zNeXiIujwazmyGjWLLrufvAh-MdYXbMMI",
-                        appKey: "9DSsEV1aakMsNzhMsEzL3l67"
+                        appId: 'jednIfOezaTYEzdCMCHUaToe-MdYXbMMI',
+                        appKey: 's07Yisjp8amNBBQzRFSa6tIF'
                     });
-                    const Barrager = AV.Object.extend('barrager');
-                    const barrager = new Barrager();
-                    barrager.set('href', href);
-                    barrager.set('info', info);
-                    barrager.set('speed', speed);
-                    // 将对象保存到云端
-                    barrager.save().then((todo) => {
-                        console.log(`保存成功objectId：${todo.id}`);
+                    $(function() {
+                        do_barrager();
+                        async function do_barrager() {
+                            let lists = [];
+                            //查询弹幕，此处为异步
+                            const query = new AV.Query('barrager');
+                            const barrager = await query.find().then((barrager) => {
+                                lists = barrager;
+                            })
+                            let length = lists.length;
+                            let index = 0;
+                            const timer = setInterval(() => {
+                                if (index === length) {
+                                    clearInterval(timer);
+                                    do_barrager()
+                                } else {
+                                    let obj = lists[index]
+                                    let jsonObject = eval('(' + JSON.stringify(obj) + ')');
+                                    $('body').barrager({
+                                        'img': '/medias/barrager/' + Math.floor(Math.random() * 3) + ".png",
+                                        'href': jsonObject.href,
+                                        'info': jsonObject.info,
+                                        'speed': jsonObject.speed
+                                    });
+                                    index++;
+                                }
+                            }, 500)
+                        }
                     });
-                }
 
-                function  clear_barrage()
-                {
-                    $.fn.barrager.removeAll();
-                }
+                    //插入弹幕
+                    function  run(){
+                        let info = $('input[name=info]').val();
+                        //判断info是否为空，为空则等于'请填写弹幕文字'
+                        (info === '' ) ?  info='hello world' : info=info;
+                        let href = $('input[name=href]').val();
+                        (href === '' ) ?  href='https://github.com/blinkfox/hexo-theme-matery' : href=href;
+                        const speed = parseInt($('input[name=speed]').val());
+                        const Barrager = AV.Object.extend('barrager');
+                        const barrager = new Barrager();
+                        barrager.set('href', href);
+                        barrager.set('info', info);
+                        barrager.set('speed', speed);
+                        // 将对象保存到云端
+                        barrager.save().then((todo) => {
+                            console.log(`留言成功objectId：${todo.id}`);
+                        });
+                    }
 
-            </script>
+                    function  clear_barrage()
+                    {
+                        $.fn.barrager.removeAll();
+                    }
+
+                </script>
+            
+        </div>
+
+        <!--其他评论card-->
+        <div class="card">
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
+            
+
         </div>
     </div>
 </main>
@@ -503,7 +509,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">33.8k</span>&nbsp;字
+                class="white-color">34.2k</span>&nbsp;字
             
             
             
