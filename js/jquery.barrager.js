@@ -20,11 +20,11 @@
 		const this_height = $(window).height() * 0.35;
 		const this_width = $(window).width() + 100;
 		const array = [
-			1*(this_height/5) + $(window).height() * 0.5,
-			2*(this_height/5) + $(window).height() * 0.5,
-			3*(this_height/5) + $(window).height() * 0.5,
-			4*(this_height/5) + $(window).height() * 0.5,
-			5*(this_height/5)   + $(window).height() * 0.5
+			(this_height / 5) + $(window).height() * 0.5,
+			2*(this_height / 5) + $(window).height() * 0.5,
+			3*(this_height / 5) + $(window).height() * 0.5,
+			4*(this_height / 5) + $(window).height() * 0.5,
+			5*(this_height / 5)   + $(window).height() * 0.5
 		]
 		const bottom =array[Math.floor(Math.random()*5)];
 
