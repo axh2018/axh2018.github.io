@@ -1,4 +1,4 @@
-/*!
+/**
  *@name     jquery.barrager.js
  *@version  1.1
  *@author   yaseng@uauc.net
@@ -54,12 +54,12 @@
 		{
 			$(id).remove();
 		});
- 		//鼠标悬浮暂停
+
 		div_barrager_box.mouseover(function()
 		{
 		     $(id).stop(true);
 		});
-		//鼠标移开继续
+
 		div_barrager_box.mouseout(function()
 		{
 			$(id).animate({right:this_width},barrage.speed*1000,function()
@@ -67,14 +67,14 @@
 				$(id).remove();
 			});
  		});
-		//点击关闭一个弹幕
+
 		$(id+'.barrage .barrage_box .close').click(function()
 		{
 			$(id).remove();
 		})
 	}
 
-	//清除所有弹幕
+
 	$.fn.barrager.removeAll=function()
 	{
 		 $('.barrage').remove();

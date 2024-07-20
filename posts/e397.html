@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="内网穿透--frp, cherry">
+    <meta name="keywords" content="内网穿透（frp版）, nullpointer">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>内网穿透--frp | cherry</title>
+    <title>内网穿透（frp版） | nullpointer</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -38,7 +38,7 @@
 
    <style>
     body{
-       background-image: url(https://matery.oss-cn-hangzhou.aliyuncs.com/pic/banner/background.jpg);
+       background-image: url(/pic/banner/background.jpg);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -56,7 +56,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">cherry</span>
+                    <span class="logo-span">nullpointer</span>
                 </a>
             </div>
             
@@ -71,17 +71,6 @@
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
       <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
     </a>
     
   </li>
@@ -155,7 +144,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">cherry</div>
+        <div class="logo-name">nullpointer</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -174,17 +163,6 @@
 			    <i class="fa-fw fas fa-home"></i>
 			
 			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
 		</a>
           
         </li>
@@ -323,12 +301,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/pic/featureImages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">内网穿透--frp</h1>
+                    <h1 class="description center-align post-title">内网穿透（frp版）</h1>
                 </div>
             </div>
         </div>
@@ -532,14 +510,14 @@
 <span class="token constant">dashboard_user</span> <span class="token attr-value"><span class="token punctuation">=</span> admin</span>
 <span class="token constant">dashboard_pwd</span> <span class="token attr-value"><span class="token punctuation">=</span> 123456</span>
 <span class="token constant">dashboard_port</span> <span class="token attr-value"><span class="token punctuation">=</span> 7500</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>然后在frp_0.34.3_linux_amd64的目录下执行 <code>frps -c frps.ini</code>就启动frps了。</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/frp/Snipaste2020-12-21-22-42-50.png"></p>
+<p>然后在<code>frp_0.34.3_linux_amd64</code>的目录下执行 <code>frps -c frps.ini</code>就启动<code>frps</code>了。</p>
+<p><img src="/pic/posts/frp/Snipaste2020-12-21-22-42-50.png"></p>
 <p>同时，我们还配置了一个监控面板。浏览器访问你的ip+7500端口号即可！（注：服务器安全组把这些需要使用的端口全部放行）</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/frp/Snipaste2020-12-21-22-51-29.png"></p>
-<p>按道理来说server端到这里应该结束了。还有一点小东西留在后面讲。</p>
-<h3 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h3><p>windows下载这个版本：</p>
+<p><img src="/pic/posts/frp/Snipaste2020-12-21-22-51-29.png"></p>
+<p>按道理来说<code>server</code>端到这里应该结束了。还有一点小东西留在后面讲。</p>
+<h3 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h3><p><code>windows</code>下载这个版本：</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/fatedier/frp/releases/download/v0.34.3/frp_0.34.3_windows_amd64.zip">https://github.com/fatedier/frp/releases/download/v0.34.3/frp_0.34.3_windows_amd64.zip</a></p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/frp/Snipaste2020-12-21-22-49-40.png"></p>
+<p><img src="/pic/posts/frp/Snipaste2020-12-21-22-49-40.png"></p>
 <p>下载完解压后同样把frps相关文件全部删掉。（systemd整个文件夹都可以删掉，因为用不上）</p>
 <p>配置frpc.ini</p>
 <pre class="line-numbers language-ini"><code class="language-ini"><span class="token selector">[common]</span>
@@ -552,11 +530,11 @@
 <span class="token constant">remote_port</span> <span class="token attr-value"><span class="token punctuation">=</span> 7001</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>0.0.0.0换成你的服务器ip。</p>
 <p>启动frpc</p>
-<pre class="line-numbers language-sh"><code class="language-sh">frpc.exe -c frpc.ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-bash"><code class="language-bash">frpc.exe -c frpc.ini<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这样就可以了，用别的电脑试试不出意外的话连上是没问题的。</p>
 <p>注意，如果用手机或者平板的不要用<code>VNC Viewer</code>，要用<code>RD Client</code>这个微软的软件，因为他们的协议是不一样的，所以不可能连的上。</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/frp/Snipaste2020-12-21-22-59-58.png"></p>
-<h3 id="配置成服务"><a href="#配置成服务" class="headerlink" title="配置成服务"></a>配置成服务</h3><p>我们的目的的确是达成了，但是发现两边都启动一次有点麻烦啊！所以把他们注册成Service吧！</p>
+<p><img src="/pic/posts/frp/Snipaste2020-12-21-22-59-58.png"></p>
+<h3 id="配置成服务"><a href="#配置成服务" class="headerlink" title="配置成服务"></a>配置成服务</h3><p>我们的目的的确是达成了，但是发现两边都启动一次有点麻烦啊！所以把他们注册成<code>Service</code>吧！</p>
 <h4 id="server自启动"><a href="#server自启动" class="headerlink" title="server自启动"></a>server自启动</h4><p>fprs里面有个systemd文件夹，里面帮我们写好了服务内容。</p>
 <pre class="line-numbers language-service"><code class="language-service">[Unit]
 Description=Frp Server Service
@@ -571,16 +549,22 @@ ExecStart=/usr/bin/frps -c /etc/frp/frps.ini
 
 [Install]
 WantedBy=multi-user.target<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>将frps剪切到 /usr/bin/，frps.ini剪切到 /etc/frp/frps.ini，frps.service剪切到/etc/systemd/system/</p>
-<p>#刷新服务列表： </p>
-<p>systemctl daemon-reload </p>
-<p>#设置开机自启 systemctl enable frpc </p>
-<p>#关闭开机自启 systemctl disable frpc </p>
-<p>#启动服务 systemctl start frpc </p>
-<p>#停止服务 systemctl stop frpc</p>
-<h4 id="client自启动"><a href="#client自启动" class="headerlink" title="client自启动"></a>client自启动</h4><p>windows将软件注册为服务需要<code>winsw</code>这个软件，下载地址：<a target="_blank" rel="noopener" href="https://github.com/winsw/winsw/releases">https://github.com/winsw/winsw/releases</a> 下x64版本即可！<a target="_blank" rel="noopener" href="https://github.com/winsw/winsw/releases/download/v3.0.0-alpha.6/WinSW.NETCore.x64.exe%EF%BC%8C%E4%B8%8B%E8%BD%BD%E5%AE%8C%E6%88%90%E4%B9%8B%E5%90%8E%E5%B0%86exe%E6%96%87%E4%BB%B6%E6%94%BE%E8%BF%9Bfrpc%E6%96%87%E4%BB%B6%E5%A4%B9%E4%B8%AD%E3%80%82">https://github.com/winsw/winsw/releases/download/v3.0.0-alpha.6/WinSW.NETCore.x64.exe，下载完成之后将exe文件放进frpc文件夹中。</a></p>
-<p>为了方便，我把它改成了winsw.exe</p>
-<p>同时，在同级目录下创建winsw.xml</p>
+<p>将<code>frps</code>剪切到 <code>/usr/bin/</code>，<code>frps.ini</code>剪切到 <code>/etc/frp/frps.ini</code>，<code>frps.service</code>剪切到<code>/etc/systemd/system/</code></p>
+<ul>
+<li><p>刷新服务列表： <code>systemctl daemon-reload </code></p>
+</li>
+<li><p>设置开机自启 <code>systemctl enable frpc </code></p>
+</li>
+<li><p>关闭开机自启 <code>systemctl disable frpc </code></p>
+</li>
+<li><p>启动服务 <code>systemctl start frpc </code></p>
+</li>
+<li><p>停止服务 <code>systemctl stop frpc</code></p>
+</li>
+</ul>
+<h4 id="client自启动"><a href="#client自启动" class="headerlink" title="client自启动"></a>client自启动</h4><p><code>windows</code>将软件注册为服务需要<code>winsw</code>这个软件，下载地址：<a target="_blank" rel="noopener" href="https://github.com/winsw/winsw/releases">https://github.com/winsw/winsw/releases</a> 下x64版本即可！<a target="_blank" rel="noopener" href="https://github.com/winsw/winsw/releases/download/v3.0.0-alpha.6/WinSW.NETCore.x64.exe">https://github.com/winsw/winsw/releases/download/v3.0.0-alpha.6/WinSW.NETCore.x64.exe</a>  ，下载完成之后将exe文件放进frpc文件夹中。</p>
+<p>为了方便，我把它改成了<code>winsw.exe</code></p>
+<p>同时，在同级目录下创建<code>winsw.xml</code></p>
 <pre class="line-numbers language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>service</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>id</span><span class="token punctuation">></span></span>frpc<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>id</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>name</span><span class="token punctuation">></span></span>Frp Client<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>name</span><span class="token punctuation">></span></span>
@@ -591,11 +575,11 @@ WantedBy=multi-user.target<span aria-hidden="true" class="line-numbers-rows"><sp
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>onfailure</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>restart<span class="token punctuation">"</span></span> <span class="token attr-name">delay</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>900 sec<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logmode</span><span class="token punctuation">></span></span>reset<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logmode</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>service</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>用管理员权限打开cmd，在从cmd中进入到你的frpc文件夹中。</p>
+<p>用管理员权限打开<code>cmd</code>，在从<code>cmd</code>中进入到你的<code>frpc</code>文件夹中。</p>
 <p>执行：</p>
-<p>winsw install</p>
-<p>winsw start </p>
-<p>这样就将frpc注册为服务了。大功告成！</p>
+<p><code>winsw install</code></p>
+<p><code>winsw start </code></p>
+<p>这样就将<code>frpc</code>注册为服务了。大功告成！</p>
 <p>更多功能，请看官方文档：</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/fatedier/frp/blob/dev/README_zh.md">https://github.com/fatedier/frp/blob/dev/README_zh.md</a></p>
 <p><a target="_blank" rel="noopener" href="https://gofrp.org/docs/">https://gofrp.org/docs/</a></p>
@@ -614,7 +598,7 @@ WantedBy=multi-user.target<span aria-hidden="true" class="line-numbers-rows"><sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">布莱恩特科比酱</a>
+                    <a href="/about" rel="external nofollow noreferrer">空指针异常</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -637,7 +621,7 @@ WantedBy=multi-user.target<span aria-hidden="true" class="line-numbers-rows"><sp
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">布莱恩特科比酱</a>
+                    <a href="/about" target="_blank">空指针异常</a>
                     !
                 </span>
             </div>
@@ -988,7 +972,7 @@ WantedBy=multi-user.target<span aria-hidden="true" class="line-numbers-rows"><sp
                 <a href="/posts/z953.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/15.jpg" class="responsive-img" alt="不到100块的智能门">
+                        <img src="/pic/featureImages/15.jpg" class="responsive-img" alt="不到100块的智能门">
                         
                         <span class="card-title">不到100块的智能门</span>
                     </div>
@@ -996,7 +980,7 @@ WantedBy=multi-user.target<span aria-hidden="true" class="line-numbers-rows"><sp
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            108块带你打造一个智能们
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -1036,7 +1020,7 @@ WantedBy=multi-user.target<span aria-hidden="true" class="line-numbers-rows"><sp
                 <a href="/posts/c0f7.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/13.jpg" class="responsive-img" alt="bmob后端云">
+                        <img src="/pic/featureImages/13.jpg" class="responsive-img" alt="bmob后端云">
                         
                         <span class="card-title">bmob后端云</span>
                     </div>
@@ -1044,7 +1028,7 @@ WantedBy=multi-user.target<span aria-hidden="true" class="line-numbers-rows"><sp
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            比目数据库在安卓上使用教程
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -1214,15 +1198,15 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2019-2024</span>
             
-            <a href="/about" target="_blank">布莱恩特科比酱</a>
+            <a href="/about" target="_blank">空指针异常</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.2k</span>&nbsp;字
+                class="white-color">34.7k</span>&nbsp;字
             
             
             

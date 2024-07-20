@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="ubuntu部署javaweb开发环境, cherry">
+    <meta name="keywords" content="ubuntu部署javaweb开发环境, nullpointer">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>ubuntu部署javaweb开发环境 | cherry</title>
+    <title>ubuntu部署javaweb开发环境 | nullpointer</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -38,7 +38,7 @@
 
    <style>
     body{
-       background-image: url(https://matery.oss-cn-hangzhou.aliyuncs.com/pic/banner/background.jpg);
+       background-image: url(/pic/banner/background.jpg);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -56,7 +56,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">cherry</span>
+                    <span class="logo-span">nullpointer</span>
                 </a>
             </div>
             
@@ -71,17 +71,6 @@
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
       <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
     </a>
     
   </li>
@@ -155,7 +144,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">cherry</div>
+        <div class="logo-name">nullpointer</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -174,17 +163,6 @@
 			    <i class="fa-fw fas fa-home"></i>
 			
 			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
 		</a>
           
         </li>
@@ -323,7 +301,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/pic/featureImages/10.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -398,10 +376,10 @@
             <div id="articleContent">
                 <h2 id="ubuntu安装OracleJdk"><a href="#ubuntu安装OracleJdk" class="headerlink" title="ubuntu安装OracleJdk"></a>ubuntu安装OracleJdk</h2><h3 id="配置jdk"><a href="#配置jdk" class="headerlink" title="配置jdk"></a>配置jdk</h3><p>进入<code>/usr/local/bin</code>目录<code>cd /usr/local/bin</code>，创建一个<code>java</code>目录，<code>mkdir java</code>，进入<code>java</code>目录，<code>cd java</code>，下载<code>jdk</code></p>
 <p>这里使用华为云的镜像站，速度较快</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/oraclejdk/Snipaste2020-07-31-10-49-11.png"></p>
+<p><img src="/pic/posts/oraclejdk/Snipaste2020-07-31-10-49-11.png"></p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">wget</span> https://repo.huaweicloud.com/java/jdk/8u202-b08/jdk-8u202-linux-x64.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>解压压缩包</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/oraclejdk/Snipaste2020-07-31-10-50-26.png" alt="解压"></p>
+<p><img src="/pic/posts/oraclejdk/Snipaste2020-07-31-10-50-26.png" alt="解压"></p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">tar</span> -xvzf jdk-8u202-linux-x64.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>删除压缩包</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">rm</span>  -rf jdk-8u202-linux-x64.tar.gz<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -416,13 +394,13 @@
 <p><code>vim</code>操作：</p>
 <pre class="line-numbers language-bash"><code class="language-bash">vim /etc/profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>在文件末尾追加以下内容：</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/oraclejdk/Snipaste2020-07-31-11-12-23.png"></p>
+<p><img src="/pic/posts/oraclejdk/Snipaste2020-07-31-11-12-23.png"></p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">export</span> JAVA_HOME<span class="token operator">=</span>/usr/local/bin/java/jdk1.8.0_202               <span class="token function">export</span> JRE_HOME<span class="token operator">=</span><span class="token variable">${JAVA_HOME}</span>/jre                               <span class="token function">export</span> CLASSPATH<span class="token operator">=</span>.:<span class="token variable">${JAVA_HOME}</span>/lib:<span class="token variable">${JRE_HOME}</span>/lib             <span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">$PATH</span><span class="token keyword">:</span><span class="token variable">${JAVA_HOME}</span>/bin <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>更新配置信息</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/oraclejdk/Snipaste2020-07-31-11-13-20.png"></p>
+<p><img src="/pic/posts/oraclejdk/Snipaste2020-07-31-11-13-20.png"></p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">source</span> /etc/profile<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>测试<code>jdk</code>是否安装成功</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/oraclejdk/Snipaste2020-07-31-11-14-09.png"></p>
+<p><img src="/pic/posts/oraclejdk/Snipaste2020-07-31-11-14-09.png"></p>
 <pre class="line-numbers language-bash"><code class="language-bash">java -version<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <pre class="line-numbers language-bash"><code class="language-bash">java version <span class="token string">"1.8.0_202"</span>                                                    
 Java<span class="token punctuation">(</span>TM<span class="token punctuation">)</span> SE Runtime Environment <span class="token punctuation">(</span>build 1.8.0_202-b08<span class="token punctuation">)</span>                       
@@ -499,7 +477,7 @@ flush privileges<span class="token punctuation">;</span><span aria-hidden="true"
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">布莱恩特科比酱</a>
+                    <a href="/about" rel="external nofollow noreferrer">空指针异常</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -522,7 +500,7 @@ flush privileges<span class="token punctuation">;</span><span aria-hidden="true"
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">布莱恩特科比酱</a>
+                    <a href="/about" target="_blank">空指针异常</a>
                     !
                 </span>
             </div>
@@ -873,7 +851,7 @@ flush privileges<span class="token punctuation">;</span><span aria-hidden="true"
                 <a href="/posts/2691.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/5.jpg" class="responsive-img" alt="javaweb应用部署">
+                        <img src="/pic/featureImages/5.jpg" class="responsive-img" alt="javaweb应用部署">
                         
                         <span class="card-title">javaweb应用部署</span>
                     </div>
@@ -881,7 +859,7 @@ flush privileges<span class="token punctuation">;</span><span aria-hidden="true"
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JavaWeb应用部署到云服务器
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -891,7 +869,7 @@ flush privileges<span class="token punctuation">;</span><span aria-hidden="true"
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            布莱恩特科比酱
+                            空指针异常
                             
                         </span>
                     </div>
@@ -917,7 +895,7 @@ flush privileges<span class="token punctuation">;</span><span aria-hidden="true"
                 <a href="/posts/6604.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/2.jpg" class="responsive-img" alt="初识jdbc">
+                        <img src="/pic/featureImages/2.jpg" class="responsive-img" alt="初识jdbc">
                         
                         <span class="card-title">初识jdbc</span>
                     </div>
@@ -925,7 +903,7 @@ flush privileges<span class="token punctuation">;</span><span aria-hidden="true"
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简单介绍jdbc的使用
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -1001,15 +979,15 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2019-2024</span>
             
-            <a href="/about" target="_blank">布莱恩特科比酱</a>
+            <a href="/about" target="_blank">空指针异常</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.2k</span>&nbsp;字
+                class="white-color">34.7k</span>&nbsp;字
             
             
             

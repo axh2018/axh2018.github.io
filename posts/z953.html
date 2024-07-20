@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="不到100块的智能门, cherry">
+    <meta name="keywords" content="不到100块的智能门, nullpointer">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>不到100块的智能门 | cherry</title>
+    <title>不到100块的智能门 | nullpointer</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -38,7 +38,7 @@
 
    <style>
     body{
-       background-image: url(https://matery.oss-cn-hangzhou.aliyuncs.com/pic/banner/background.jpg);
+       background-image: url(/pic/banner/background.jpg);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -56,7 +56,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">cherry</span>
+                    <span class="logo-span">nullpointer</span>
                 </a>
             </div>
             
@@ -71,17 +71,6 @@
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
       <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
     </a>
     
   </li>
@@ -155,7 +144,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">cherry</div>
+        <div class="logo-name">nullpointer</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -174,17 +163,6 @@
 			    <i class="fa-fw fas fa-home"></i>
 			
 			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
 		</a>
           
         </li>
@@ -323,7 +301,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/pic/featureImages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -479,7 +457,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    397
+                    416
                 </div>
                 
 
@@ -506,34 +484,37 @@
 <li>3.7V <code>18650</code>电池一节</li>
 <li><code>18650</code>电池充电器一枚</li>
 </ol>
-<p>开发板￥28 + 烧录器￥8 + 舵机￥20 + 胶布￥5 + 鱼线￥2 + 杜邦线￥4 + 电池￥5 + 充电器￥10</p>
+<p>ESP32-CAM开发板￥28 + 烧录器￥8 + 舵机￥20 + 胶布￥5 + 鱼线￥2 + 杜邦线￥4 + 电池￥5 + 充电器￥10</p>
 <h2 id="环境篇"><a href="#环境篇" class="headerlink" title="环境篇"></a>环境篇</h2><h3 id="安装arduino"><a href="#安装arduino" class="headerlink" title="安装arduino"></a>安装<code>arduino</code></h3><p><a target="_blank" rel="noopener" href="https://www.arduino.cc/en/software">https://www.arduino.cc/en/software</a></p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-05-45.png"></p>
+<p><img src="/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-05-45.png"></p>
 <h3 id="配置esp库"><a href="#配置esp库" class="headerlink" title="配置esp库"></a>配置<code>esp</code>库</h3><p>安装<code>arduino</code>后，打开首选项，填入下面的<code>url</code>，选择ok即可</p>
-<p><strong>因为网络原因，下载可能较慢，需要魔法</strong></p>
+<p><strong>因为网络原因，下载可能较慢</strong></p>
 <p><a target="_blank" rel="noopener" href="https://dl.espressif.com/dl/package_esp32_index.json">https://dl.espressif.com/dl/package_esp32_index.json</a></p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-13-34.png"></p>
-<h3 id="安装esp32库"><a href="#安装esp32库" class="headerlink" title="安装esp32库"></a>安装esp32库</h3><p>打开工具-&gt;开发板-&gt;开发板管理器，搜索esp32，安装即可</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-23-04.png"></p>
-<p><strong>因为网络原因，下载可能较慢，需要魔法</strong></p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-25-09.png"></p>
+<p><img src="/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-13-34.png"></p>
+<h3 id="安装esp32库"><a href="#安装esp32库" class="headerlink" title="安装esp32库"></a>安装esp32库</h3><p>打开工具-&gt;开发板-&gt;开发板管理器，搜索<code>esp32</code>，安装即可</p>
+<p><img src="/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-23-04.png"></p>
+<p><strong>因为网络原因，下载可能较慢</strong></p>
+<p><img src="/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-25-09.png"></p>
 <h3 id="选择开发板"><a href="#选择开发板" class="headerlink" title="选择开发板"></a>选择开发板</h3><p>上面步骤完成后，选择<code>AI-Thinker ESP32-CAM</code>这块开发板</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-33-08.png"></p>
+<p><img src="/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-33-08.png"></p>
 <h3 id="配置编译tools"><a href="#配置编译tools" class="headerlink" title="配置编译tools"></a>配置编译<code>tools</code></h3><p>在你的<code>arduino</code>安装目录下，找到<code>hardware</code>这个目录，例如我的是：<code>D:\arduino\hardware</code><br>建立目录<code>espressif</code>，再在<code>espressif</code>里面建立<code>esp32</code>目录。</p>
 <p>在<code>esp32</code>这个目录下执行</p>
 <p><code>git clone https://github.com/espressif/arduino-esp32.git</code></p>
 <p>提示：这个仓库比较大，下载较慢</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-45-28.png"></p>
+<p><img src="/pic/posts/esp32-wechat-door/Snipaste2021-04-20-09-45-28.png"></p>
 <p>克隆完成后，进入到<code>esp/tools</code>这个目录，双击<code>get.exe</code></p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-09-45.png"></p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-12-03.png"></p>
-<h3 id="注册巴法云"><a href="#注册巴法云" class="headerlink" title="注册巴法云"></a>注册巴法云</h3><p>我们用到的平台为巴法云，免费使用，且不用实名认证群里的开发者都特别热心，安利一波。</p>
+<p><img src="/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-09-45.png"></p>
+<p><img src="/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-12-03.png"></p>
+<h3 id="注册巴法云"><a href="#注册巴法云" class="headerlink" title="注册巴法云"></a>注册巴法云</h3><p>我们用到的平台为巴法云，免费使用，个人认为还比较方便，在此安利一波。</p>
 <p>巴法云官网：<a target="_blank" rel="noopener" href="https://bemfa.com/%E6%B3%A8%E5%86%8C%E5%8F%AA%E9%9C%80%E8%A6%81%E9%82%AE%E7%AE%B1%E5%8D%B3%E5%8F%AF">https://bemfa.com/注册只需要邮箱即可</a></p>
 <p>选择创建一个<code>tcp</code>创客云</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-50-02.png"></p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-50-17.png"></p>
+<p><img src="/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-50-02.png"></p>
+<p><img src="/pic/posts/esp32-wechat-door/Snipaste2021-04-20-10-50-17.png"></p>
 <p>至此，环境搭建完成~</p>
-<h2 id="代码篇"><a href="#代码篇" class="headerlink" title="代码篇"></a>代码篇</h2><h2 id="拆门篇"><a href="#拆门篇" class="headerlink" title="拆门篇"></a>拆门篇</h2><h2 id="结束篇"><a href="#结束篇" class="headerlink" title="结束篇"></a>结束篇</h2>
+<h2 id="代码篇"><a href="#代码篇" class="headerlink" title="代码篇"></a>代码篇</h2><p>传送门：<a target="_blank" rel="noopener" href="https://github.com/axh2018/esp32cam-wechat-open-door">https://github.com/axh2018/esp32cam-wechat-open-door</a></p>
+<p>代码全部放在上面了</p>
+<p>其中<a target="_blank" rel="noopener" href="https://github.com/axh2018/esp32cam-wechat-open-door/blob/main/wechat_servo.cpp">wechat_servo.cpp</a> 为arduino代码，其余为微信小程序代码</p>
+
             </div>
             <hr/>
 
@@ -548,7 +529,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">布莱恩特科比酱</a>
+                    <a href="/about" rel="external nofollow noreferrer">空指针异常</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -571,7 +552,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">布莱恩特科比酱</a>
+                    <a href="/about" target="_blank">空指针异常</a>
                     !
                 </span>
             </div>
@@ -915,47 +896,45 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/z953.html">
+                <a href="/posts/vs21.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/15.jpg" class="responsive-img" alt="不到100块的智能门">
+                        <img src="/pic/featureImages/16.jpg" class="responsive-img" alt="服务器加个ipv6吧">
                         
-                        <span class="card-title">不到100块的智能门</span>
+                        <span class="card-title">服务器加个ipv6吧</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            108块带你打造一个智能们
+                            
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-25
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/esp32-cam/" class="post-category">
-                                    esp32-cam
+                            <a href="/categories/linux/" class="post-category">
+                                    linux
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%8D%95%E7%89%87%E6%9C%BA/">
-                        <span class="chip bg-color">单片机</span>
+                    <a href="/tags/ipv6/">
+                        <span class="chip bg-color">ipv6</span>
                     </a>
                     
                 </div>
@@ -972,15 +951,15 @@
                 <a href="/posts/e397.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/14.jpg" class="responsive-img" alt="内网穿透--frp">
+                        <img src="/pic/featureImages/14.jpg" class="responsive-img" alt="内网穿透（frp版）">
                         
-                        <span class="card-title">内网穿透--frp</span>
+                        <span class="card-title">内网穿透（frp版）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            frp配置
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -1150,15 +1129,15 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2019-2024</span>
             
-            <a href="/about" target="_blank">布莱恩特科比酱</a>
+            <a href="/about" target="_blank">空指针异常</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.2k</span>&nbsp;字
+                class="white-color">34.7k</span>&nbsp;字
             
             
             

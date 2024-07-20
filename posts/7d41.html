@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="阿里云oss静态托管网站, cherry">
+    <meta name="keywords" content="oss静态托管网站, nullpointer">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>阿里云oss静态托管网站 | cherry</title>
+    <title>oss静态托管网站 | nullpointer</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -38,7 +38,7 @@
 
    <style>
     body{
-       background-image: url(https://matery.oss-cn-hangzhou.aliyuncs.com/pic/banner/background.jpg);
+       background-image: url(/pic/banner/background.jpg);
        background-repeat:no-repeat;
        background-size:cover;
        background-attachment:fixed;
@@ -56,7 +56,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">cherry</span>
+                    <span class="logo-span">nullpointer</span>
                 </a>
             </div>
             
@@ -71,17 +71,6 @@
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
       <span>首页</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/tags" class="waves-effect waves-light">
-      
-      <i class="fas fa-tags" style="zoom: 0.6;"></i>
-      
-      <span>标签</span>
     </a>
     
   </li>
@@ -155,7 +144,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">cherry</div>
+        <div class="logo-name">nullpointer</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -174,17 +163,6 @@
 			    <i class="fa-fw fas fa-home"></i>
 			
 			首页
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/tags" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-tags"></i>
-			
-			标签
 		</a>
           
         </li>
@@ -323,12 +301,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/pic/featureImages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">阿里云oss静态托管网站</h1>
+                    <h1 class="description center-align post-title">oss静态托管网站</h1>
                 </div>
             </div>
         </div>
@@ -399,18 +377,18 @@
                 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>个人博客纯静态页面放服务器小题大作了，用GitHub pages速度又太慢，刚好找到了阿里云对象存储托管网站这个办法。阿里云oss按量计费：存储0.12元/GB，外网流出0.25元/GB。</p>
 <h2 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h2><p>打开阿里云官网，找到<a target="_blank" rel="noopener" href="https://www.aliyun.com/ss/?k=oss">https://www.aliyun.com/ss/?k=oss</a> oss服务，先开通oss。</p>
 <p>开通完后创建一个bucket：</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/ossweb/Snipaste2020-11-02-20-26-04.png"></p>
+<p><img src="/pic/posts/ossweb/Snipaste2020-11-02-20-26-04.png"></p>
 <p>bucket名字和地区自己选择，权限选择公共读，其他的默认就好了。</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/ossweb/Snipaste2020-11-02-20-29-27.png"></p>
+<p><img src="/pic/posts/ossweb/Snipaste2020-11-02-20-29-27.png"></p>
 <p>bucket创建完成后，来到控制台，设置静态页面（访问<code>jaav.com.cn</code>映射到<code>jaav.com.cn/index.html</code>)</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/ossweb/Snipaste2020-11-02-20-32-06.png"></p>
+<p><img src="/pic/posts/ossweb/Snipaste2020-11-02-20-32-06.png"></p>
 <p>静态页面这样设置即可：</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/ossweb/Snipaste2020-11-02-20-35-04.png"></p>
+<p><img src="/pic/posts/ossweb/Snipaste2020-11-02-20-35-04.png"></p>
 <p>完成后保存；</p>
 <p>紧接着就是绑定自己的域名了，控制台传输管理-&gt;域名管理-&gt;绑定域名。将自己的域名解析一个cname到这个oss地址就可以了。</p>
 <p>还需要上传ssl证书，这里可以看我的上一篇文章&lt;nginx配置https&gt;，里面有申请ssl证书环节。</p>
 <p>下载下图这个“其他”证书即可：</p>
-<p><img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/posts/ossweb/Snipaste2020-11-02-20-41-59.png"></p>
+<p><img src="/pic/posts/ossweb/Snipaste2020-11-02-20-41-59.png"></p>
 <p>下载完后解压，将.key和.pem文件用记事本打开，填入证书托管的公钥和私钥中。</p>
 <p>这就大功告成了，上传hexo生成的public文件夹下的内容到你创建的bucket就可以了。</p>
 
@@ -428,7 +406,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">布莱恩特科比酱</a>
+                    <a href="/about" rel="external nofollow noreferrer">空指针异常</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -451,7 +429,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">布莱恩特科比酱</a>
+                    <a href="/about" target="_blank">空指针异常</a>
                     !
                 </span>
             </div>
@@ -802,7 +780,7 @@
                 <a href="/posts/c0f7.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/13.jpg" class="responsive-img" alt="bmob后端云">
+                        <img src="/pic/featureImages/13.jpg" class="responsive-img" alt="bmob后端云">
                         
                         <span class="card-title">bmob后端云</span>
                     </div>
@@ -810,7 +788,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            比目数据库在安卓上使用教程
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -850,7 +828,7 @@
                 <a href="/posts/45b6.html">
                     <div class="card-image">
                         
-                        <img src="https://matery.oss-cn-hangzhou.aliyuncs.com/pic/featureImages/11.jpg" class="responsive-img" alt="ipv6白嫖校园网">
+                        <img src="/pic/featureImages/11.jpg" class="responsive-img" alt="ipv6白嫖校园网">
                         
                         <span class="card-title">ipv6白嫖校园网</span>
                     </div>
@@ -858,7 +836,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            利用ipv6绕过校园网验证
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -934,15 +912,15 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
         <div class="col s12 m8 l8 copy-right">
             Copyright&nbsp;&copy;
             
-                <span id="year">2019-2021</span>
+                <span id="year">2019-2024</span>
             
-            <a href="/about" target="_blank">布莱恩特科比酱</a>
+            <a href="/about" target="_blank">空指针异常</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">34.2k</span>&nbsp;字
+                class="white-color">34.7k</span>&nbsp;字
             
             
             
